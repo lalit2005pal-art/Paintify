@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paintify</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+    <div class="main-container">
+
+        <div class="preview-section">
+            <h1>Paintify</h1>
+            <div id="paint-box" contenteditable="true">Start your project....</div>
+            <button id="download-btn" onclick="showAlert()">Download</button>
+        </div>
+
+
+        <div class="control-row">
+
+
+            <div class="control-box">
+                <div class="control-header">Choose Background Color</div>
+                <div class="bg-grid">
+                    <div class="color-btn" style="background: blue;" onclick="changeBg('blue')"></div>
+                    <div class="color-btn" style="background: green;" onclick="changeBg('green')"></div>
+                    <div class="color-btn" style="background: red;" onclick="changeBg('red')"></div>
+                    <div class="color-btn" style="background: yellow;" onclick="changeBg('yellow')"></div>
+                    <div class="color-btn" style="background: purple;" onclick="changeBg('purple')"></div>
+                    <div class="color-btn" style="background: orange;" onclick="changeBg('orange')"></div>
+                    <div class="color-btn" style="background: pink;" onclick="changeBg('pink')"></div>
+                    <div class="color-btn" style="background: cyan;" onclick="changeBg('cyan')"></div>
+                    <div class="color-btn" style="background: lightgray;" onclick="changeBg('lightgray')"></div>
+                    <div class="color-btn" style="background: white;" onclick="changeBg('white')"></div>
+                </div>
+
+            </div>
+
+            <div class="control-box">
+                <div class="control-header">Choose Text Color</div>
+                <div class="text-grid">
+                    <div class="color-btn" style="background: black;" onclick="changeText('black')"></div>
+                    <div class="color-btn" style="background: white;" onclick="changeText('white')"></div>
+                    <div class="color-btn" style="background: red;" onclick="changeText('red')"></div>
+                    <div class="color-btn" style="background: blue;" onclick="changeText('blue')"></div>
+                    <div class="color-btn" style="background: green;" onclick="changeText('green')"></div>
+                    <div class="color-btn" style="background: yellow;" onclick="changeText('yellow')"></div>
+                    <div class="color-btn" style="background: purple;" onclick="changeText('purple')"></div>
+                    <div class="color-btn" style="background: orange;" onclick="changeText('orange')"></div>
+                </div>
+            </div>
+
+            <div class="control-box">
+                <div class="control-header">Choose Your Font Style</div>
+                <div class="font-list">
+                    <button class="font-btn" style="font-family: Arial;" onclick="changeFont('Arial')">Arial</button>
+                    <button class="font-btn" style="font-family: 'Courier New';" onclick="changeFont('Courier New')">Courier New</button>
+                    <button class="font-btn" style="font-family: Georgia;" onclick="changeFont('Georgia')">Georgia</button>
+                    <button class="font-btn" style="font-family: 'Comic Sans MS';" onclick="changeFont('Comic Sans MS')">Comic Sans MS</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <script>
+        function changeBg(color){
+            document.getElementById("paint-box").style.backgroundColor = color;
+        }
+
+        function changeText(color){
+            document.getElementById("paint-box").style.color = color;
+        }
+
+        function changeFont(font){
+            document.getElementById("paint-box").style.fontFamily = font;
+        }
+
+        function showAlert(){
+            alert("Your text is: " + document.getElementById("paint-box").innerText)
+        }
+    </script>
+</body>
+
+</html>

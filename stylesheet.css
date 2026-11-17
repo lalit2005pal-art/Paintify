@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+.main-container{
+    width: 750px;
+    padding: 25px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.preview-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.preview-section h1{
+    margin: 0;
+}
+
+#paint-box{
+    width: 220px;
+    height: 180px;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    background-color: #ffffff;
+    color: #000;
+}
+
+#download-btn{
+    padding: 8px 18px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #333;
+    background-color: #eee;
+    border-radius: 4px;
+}
+
+.controls-row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 15px;
+}
+
+.control-box{
+    flex: 1;
+    border: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.control-header{
+    border-bottom: 2px solid #333;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.bg-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    padding: 12px;
+    justify-items: center;
+}
+
+.text-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    padding: 12px;
+    justify-items: center;
+}
+
+.color-btn{
+    width: 28px;
+    height: 28px;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+.font-list{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+}
+
+.font-btn{
+    padding: 6px;
+    border: 1px solid #333;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
